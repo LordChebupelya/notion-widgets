@@ -1,0 +1,38 @@
+---
+// css 
+import '../styles/tailwind.css';
+import '../styles/tabler-icons.min.css';
+
+// components 
+import NavBar from '../components/navBar.astro';
+import LinkBtn from '../components/linkBtn.astro';
+import Footer from '../components/footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="https://raw.githubusercontent.com/LordChebupelya/astro-blog/master/assets/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>_shork</title>
+	</head>
+	<body class="bg-gray-50 text-black h-screen w-screen p-4">
+		<NavBar 
+			logo="https://github.com/LordChebupelya/astro-blog/blob/47c89020ad8ad5906935917e3d710133b0798e75/assets/shark-apple.png?raw=true"
+			homeLink="/"
+			browseLink="/widgets"
+		/>
+		<div id="content" class="pt-20 text-center h-full flex flex-col justify-between">
+			<div class="mb-auto">
+				<!-- <h1 class="text-5xl">_shork</h1>
+				<h2 class="text-3xl">Website under construction &#128679;</h2> -->
+				<slot />
+			</div>
+			<br>
+			<Footer 
+				sourceUrl="https://github.com/LordChebupelya/notion-widgets"
+			/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+---
+import WidgetLayout from "../../../layouts/widgetLayout.astro";
+---
+
+<WidgetLayout name="Quotes">
+	<div class="flex flex-col gap-2 justify-between w-full h-full">
+		<div>
+			<p id="quote" class="text-xl md:text-2xl">loading...</p>
+			<cite id="author" class="text-zinc-500 text-lg before:content-['-_']">author</cite>
+		</div>
+		<div>
+			<button id="getquote" class="p-1 w-10 h-10 transition-colors border-black border-2 rounded-full bg-gray-50 text-xl hover:bg-black hover:text-white"><i class="ti ti-reload"></i></button>
+			<script src="/src/scripts/newquote.js" is:inline></script>
+		</div>
+	</div>
+</WidgetLayout>
+

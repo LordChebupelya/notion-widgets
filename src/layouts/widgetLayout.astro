@@ -1,0 +1,23 @@
+---
+import "../styles/tailwind.css";
+import "../styles/tabler-icons.min.css";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{name} | shork's Notion </title>
+	</head>
+	<body class="bg-gray-50 text-black p-4 h-screen w-screen">
+    <slot />
+	</body>
+</html>

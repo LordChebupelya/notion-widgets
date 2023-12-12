@@ -1,0 +1,32 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  imageUrl: string;
+}
+
+const { name, description, url, imageUrl } = Astro.props;
+
+import BaseLayout from "./baseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="md:w-[48rem] mx-auto text-left relative">
+    <div class="flex flex-col gap-2">
+      <div class="w-full h-48 flex gap-2">
+        <img src={imageUrl} alt="widget image" class="border-2 border-gray-400 bg-gray-200 rounded-2xl w-48 h-auto object-contain">
+        <div class="flex flex-col gap-2">
+          <p class="text-4xl">{name}</p>
+          <p class="text-2xl">{description}</p>
+        </div>
+      </div>
+      <h1 class="text-4xl">Widget Link</h1>
+      <div class="bg-gray-200 border-2 border-gray-400 rounded-full w-full flex f justify-between">
+        <p id="embedUrl" class="p-2 text-xl">{url}</p>
+        <button id="copyUrl" class="border-l-2 border-gray-400 transition-all h-full p-2 text-xl"><i class="ti ti-copy"></i>Copy</button>
+        <script src="../scripts/copyText.js"></script>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

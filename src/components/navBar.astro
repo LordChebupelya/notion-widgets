@@ -1,0 +1,21 @@
+---
+interface Props {
+  homeLink: string;
+  browseLink: string;
+  logo: string;
+}
+
+const { logo, homeLink, browseLink } = Astro.props;
+---
+
+<nav id="navBar" class="bg-opacity-60 backdrop-blur-xl border-2 border-stone-300 rounded-full flex fixed justify-evenly justify-self-center right-1/2 translate-x-1/2 w-2/3 h-12 sm:h-14 p-2 align-middle z-10">
+  <div class="w-1/2 pl-4">
+    <img src={logo} alt="logo" class="w-8 h-8 sm:w-10 sm:h-10">
+  </div>
+  <div class="w-1/2 align-middle pr-4 flex flex-nowrap space-x-2 justify-end">
+    <a href={homeLink} class="link">Home</a>
+    <a href={browseLink} class="link">Browse</a>
+  </div>
+</nav>
+
+ 

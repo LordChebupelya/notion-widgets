@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  icon: string;
+  icon_color: string;
+  url: string;
+}
+
+const { title, icon, icon_color, url } = Astro.props;
+
+var iconClass = 'ti ti-'+icon
+var iconStyle = 'text-lg sm:text-2xl md:text-3xl'
+---
+
+<a href={url} title={title} class="text-2xl md:text-3xl transition-all text-zinc-500 hover:text-white">
+  <i class={iconClass}></i>
+</a>

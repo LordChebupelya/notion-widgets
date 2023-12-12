@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+---
+
+<a href={url} class="linkbtn" download>
+  <i class="ti ti-download"></i>
+  {title}
+</a>

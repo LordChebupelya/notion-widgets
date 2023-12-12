@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  icon: string;
+  url: string;
+}
+
+const { title, icon, url } = Astro.props;
+
+var iconClass = 'ti ti-'+icon
+---
+
+<a href={url} class="linkbtn">
+  <i class={iconClass}></i>
+  {title}
+</a>

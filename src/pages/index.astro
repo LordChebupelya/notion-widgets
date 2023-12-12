@@ -1,0 +1,21 @@
+---
+import LinkBtn from "../components/linkBtn.astro";
+import BaseLayout from "../layouts/baseLayout.astro";
+---
+
+<BaseLayout>
+  <h1 class="text-2xl md:text-4xl">shork's Notion</h1>
+  <h2 class="text-xl md:text-3xl">a collection of free widgets for Notion.</h2>
+  <br>
+  <div class="relative w-fit mx-auto">
+    <video src="/assets/showcase_1.mp4" id="showcaseVideo1" class="mx-auto h-auto w-[48rem]" autoplay></video>
+    <button id="playpausebtn" class="absolute bottom-2 right-2 text-3xl z-10"><i id="playpauseicon" class="ti ti-player-pause"></i></button>
+    <script src="../scripts/playpausevideo.js"></script>
+  </div>
+  <br>
+  <LinkBtn 
+    title="Browse"
+    icon="compass"
+    url="/widgets"
+  />
+</BaseLayout>

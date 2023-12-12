@@ -1,0 +1,29 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  imageUrl: string;
+}
+
+const { name, description, url, imageUrl } = Astro.props;
+
+// components
+import LinkBtn from './linkBtn.astro';
+---
+
+<div class="flex flex-col bg-gray-200 border-2 border-gray-500 rounded-xl w-64">
+  <div class="bg-gray-300 rounded-t-xl">
+    <img src={imageUrl} alt="widget image" class="w-48 h-auto mx-auto object-contain">
+  </div>
+  <div class="text-left p-2">
+    <p class="text-3xl">{name}</p>
+    <p class="text-xl">{description}</p>
+    <br>
+    <LinkBtn 
+      title="More"
+      icon="arrow-right"
+      url={url}
+    />
+  </div>
+</div>

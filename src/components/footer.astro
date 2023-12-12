@@ -1,0 +1,25 @@
+---
+interface Props {
+  sourceUrl: string;
+}
+
+const { sourceUrl } = Astro.props;
+
+// components
+import LinkBtn from "./linkBtn.astro";
+---
+
+<footer class="w-full h-auto bg-gray-200 pt-4 space-x-2 rounded-xl">
+  <LinkBtn 
+    title="Source"
+    icon="code"
+    url={sourceUrl}
+  />
+  <br> <br>
+  <p class="text-lg text-zinc-600 font-mono">
+    made by _shork | libraries: 
+    <a href="https://tailwindcss.com" class="link-dark">tailwindcss</a>, 
+    <a href="https://astro.build" class="link-dark">astro</a>, and 
+    <a href="https://tablericons.com/" class="link-dark">tablericons</a>.
+  </p>
+</footer>

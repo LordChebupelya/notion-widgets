@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/baseLayout.astro';
+
+// components
+import Widgetcard from '../../components/widgetcard.astro';
+---
+
+<BaseLayout>
+  <h1 class="text-2xl md:text-4xl">Widgets</h1>
+  <h2 class="text-xl md:text-3xl">browse free widgets for Notion.</h2>
+  <br>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 w-fit mx-auto mb-4">
+    <Widgetcard 
+      name="Clock"
+      description="A simple clock widget."
+      url="/widgets/clock"
+      imageUrl="/assets/clock_img.png"
+    />
+    <Widgetcard 
+      name="Quotes"
+      description="Get random quotes."
+      url="/widgets/quotes"
+      imageUrl="/assets/quotes_img.png"
+    />
+  </div>
+</BaseLayout>
