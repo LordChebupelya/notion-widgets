@@ -1,5 +1,5 @@
 let params = new URLSearchParams(window.location.search);
-let quotes = '/widgets/quotes/embed';
+let quotes = '/widgets/quotes/embed/';
 let darkMode = params.get('dark');
 
 if (darkMode) {
