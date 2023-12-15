@@ -1,6 +1,9 @@
 let btn = document.querySelector('#copyUrl');
 let text = document.querySelector('#embedUrl').textContent;
 
+let btn2 = document.querySelector('#copyUrl2');
+let text2 = document.querySelector('#embedUrl2').textContent;
+
 function copyText(value, elem) {
   navigator.clipboard.writeText(value);
   elem.classList.add('text-green-500');
@@ -14,3 +17,4 @@ function copyText(value, elem) {
 }
 
 btn.addEventListener('click', () => copyText(text, btn));
+btn2.addEventListener('click', () => copyText(text2, btn2));

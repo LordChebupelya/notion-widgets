@@ -21,10 +21,16 @@ import BaseLayout from "./baseLayout.astro";
           <p class="text-2xl">{description}</p>
         </div>
       </div>
-      <h1 class="text-4xl">Widget Link</h1>
-      <div class="bg-gray-200 border-2 border-gray-400 rounded-full w-full flex f justify-between">
-        <p id="embedUrl" class="p-2 text-xl border-r-2 border-gray-400 sm:border-r-0">{url}</p>
-        <button id="copyUrl" class="transition-all h-full p-2 text-xl border-gray-400 sm:border-l-2"><i class="ti ti-copy"></i>Copy</button>
+      <h1 class="text-4xl">Widget Links</h1>
+      <div class="flex flex-col gap-2">
+        <div class="bg-gray-200 border-2 border-gray-400 rounded-full w-full flex justify-between">
+          <p id="embedUrl" class="p-2 text-xl border-r-2 border-gray-400 sm:border-r-0">{url}</p>
+          <button id="copyUrl" class="transition-all h-full p-2 text-xl border-gray-400 sm:border-l-2"><i class="ti ti-copy"></i>Copy</button>
+        </div>
+        <div class="bg-gray-200 border-2 border-gray-400 rounded-full w-full flex justify-between">
+          <p id="embedUrl2" class="p-2 text-xl border-r-2 border-gray-400 sm:border-r-0">{url+'?dark=true'}</p>
+          <button id="copyUr2l" class="transition-all h-full p-2 text-xl border-gray-400 sm:border-l-2"><i class="ti ti-copy"></i>Copy</button>
+        </div>
         <script src="../scripts/copyText.js"></script>
       </div>
     </div>
