@@ -1,3 +1,9 @@
+# archival notice
+
+this project will no longer be updated and will be archived. i simply don't have time to work on this. i will leave the source code available for everyone to use.
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh
