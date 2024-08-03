@@ -4,11 +4,16 @@ import BaseLayout from "../layouts/baseLayout.astro";
 ---
 
 <BaseLayout>
+  <div class="border-2 border-amber-300 bg-amber-200 text-black rounded-xl px-2 py-1 w-fit mx-auto mb-2">
+    <h1 class="text-2xl font-semibold"> <i class="ti ti-alert-triangle"></i> archiving this project</h1>
+    <p class="text-lg">this project will no longer be updated and will be archived. i simply don't have time to work on this. i will leave the source code available for everyone to use.</p>
+    <p>P.S. my code is very messy, so i guess you could just go and laugh at how horrible it is</p>
+  </div>
   <h1 class="text-2xl md:text-4xl">shork's Notion</h1>
   <h2 class="text-xl md:text-3xl">a collection of free widgets for Notion.</h2>
   <br>
   <div class="relative w-fit mx-auto">
-    <video src="https://github.com/LordChebupelya/notion-widgets/blob/6eee76e96d6105e350403070451868fcad6a502f/assets/showcase_1.mp4?raw=true" id="showcaseVideo1" class="mx-auto h-auto w-[48rem]" autoplay></video>
+    <video src="https://github.com/shorkdev/notion-widgets/raw/master/assets/showcase_1.mp4" id="showcaseVideo1" class="mx-auto h-auto w-[48rem]" autoplay muted></video>
     <button id="playpausebtn" class="absolute bottom-2 right-2 text-3xl z-10"><i id="playpauseicon" class="ti ti-player-pause"></i></button>
     <script src="../scripts/playpausevideo.js"></script>
   </div>
